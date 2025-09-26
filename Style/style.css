@@ -1,0 +1,308 @@
+/* Reset */
+* {
+  /* Remove default margin and padding from all elements */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    /* Ensure padding and border are included in the element's total width and height */
+}
+
+body {
+  /* Set the default font-family */
+  font-family: 'Roboto', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section Styling */
+.main-header {
+  /* Apply a gradient to the text, only showing the gradient where text is present */
+  -webkit-background-clip: text;
+  background: linear-gradient(to right, #166ce4, hsl(200, 33%, 34%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;     /* Make the text transparent so the background clip shows through */
+  text-align: center;
+  padding: 2rem 2rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+  /* Large font size for the main title */
+  font-size: 3rem;
+  /* Bold font weight */
+  font-weight: 700;
+}
+
+/* Hero Section Styling */
+.hero {
+  /* Add padding to the hero section */
+  padding: 3rem 1rem;
+}
+
+.hero-content h2 {
+  /* Styles for the main heading text */
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-content span {
+  /* Apply a gradient to the highlighted text */
+  -webkit-background-clip: text;
+  background: linear-gradient(to right, #2867be, #3e5c6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;   /* Maintain large font size and bold weight */
+  line-height: 1.2;
+  font-weight: 700;
+  display: block;    /* Ensure span is treated as a block element */
+  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.hero-content p {
+
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.hero-content button {
+  /* Button background gradient */
+  background: linear-gradient(to right, #2f74d4, #3a6073);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.hero-content button a {
+  /* Remove hyperlink underline and set color */
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero-content button:hover {
+
+ opacity: 0.9;
+ transform: translateY(-2px);
+ transition: all 0.3s ease;
+}
+
+
+.hero-image img {
+  max-width: 100%;   /* Ensure image scales down on smaller screens */
+  border-radius: 15px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section Styling */
+.features {
+  /* Use flexbox to arrange feature cards */
+  display: flex;
+  justify-content: space-around;   /* Space out the items evenly */
+  padding: 3rem 1rem;
+  background: #fff;
+  flex-wrap: wrap;   /* Allow features to wrap on smaller screens */
+}
+
+.feature {
+  /* Flex basis: allow to grow/shrink, initial width suggestion of 250px */
+  flex: 1 1 250px;
+  margin: 1rem;
+  padding: 1.5rem;
+  background: #f1f1f1;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  /* Lift the card slightly on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s  ease-in-out;
+}
+
+.feature h3 {
+  color: hsl(200, 33%, 34%);
+  margin-bottom: 0.5rem;
+}
+
+/* Generator Input Section */
+#generator {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.ingredientInput,
+.searchBtn {
+  margin: 1rem 0;
+}
+
+
+/* Styling for the text input field */
+.ingredientInput input {
+  padding: 0.6rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  max-width: 80%;
+  outline: none;
+}
+
+.ingredientInput input:focus {
+  border-color: #2f74d4;
+}
+
+
+/* Styling for the Add and Search buttons */
+.ingredientInput button,
+.searchBtn button {
+  background: linear-gradient(to right, #2f74d4, #3a6073);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ingredientInput button:hover,
+.searchBtn button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Popup Modal (Recipe Display) */
+.recipe-popup {
+  /* Position fixed to cover the entire viewport */
+  position: fixed; /* Using fixed instead of relative for fullscreen overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;  
+}
+
+.popup-content {
+  background: #fff;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content img {
+  /* Ensure image scales inside the modal */
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.popup-content h2 {
+  /* Gradient title for the recipe name */
+  font-size: 2.5rem;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  background: linear-gradient(to right, #2867be, #3e5c6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.popup-content ul {
+  /* Spacing for ingredient lists */
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.popup-content p {
+  /* Spacing for paragraphs (e.g., instructions) */
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.close-btn {
+  /* Position the close button in the top right corner */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.close-btn:hover {
+  color: #2f74d4;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .hero .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  /* Adjust Hero heading font sizes for medium screens */
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content span {
+    font-size: 2rem;
+  }
+
+  /* Stack features vertically on tablet/mobile */
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Make feature cards wider on smaller screens */
+  .feature {
+    width: 90%;
+  }
+
+  /* Adjust input field width */
+  .ingredientInput input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller font for the main header on small phones */
+  .main-header h1 {
+    font-size: 2rem;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .popup-content h2 {
+    font-size: 1.4rem;
+  }
+}
