@@ -33,7 +33,7 @@ It allows users to discover new dishes with ingredients, instructions, and meal 
   ```
 2. Navigate to the project folder:
   ```
-  cd Recipe-Finder
+  cd Recipe-Finder/
   ```
 3. Open index.html right click then select Open With Live Server to open in your browser.
 
