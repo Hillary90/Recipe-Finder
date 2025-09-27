@@ -66,7 +66,7 @@ async function fetchRandomRecipe() {
 ```
 # 📸 Screenshots
 Home Page
-![Home Page](images/screencapture-127-0-0-1-5500-Index-html-2025-09-27-18_38_45.png)
+![Home Page](images/screencapture-127-0-0-1-5500-Index-html-2025-09-27-18_13_26.png)
 
 # Live Demo
 You can view the project here: [Live Site](https://hillary90.github.io/Recipe-Finder/)
