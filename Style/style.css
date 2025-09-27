@@ -181,41 +181,34 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Popup Modal (Recipe Display) */
+/*Pop up container*/
+/* Ensures the popup container covers the screen and centers the content */
 .recipe-popup {
-  /* Position fixed to cover the entire viewport */
-  position: relative; /* Using fixed instead of relative for fullscreen overlay */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
-  background: rgba(255, 255, 255, 0.95);
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;  
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000;
 }
 
+/*Styles the wrapper *inside* the flex container, which holds the recipe */
 .popup-content {
-  background: #fff;
-  width: 90%;
-  max-width: 700px;
-  max-height: 80vh;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 500px;
+  max-height: 90vh;
   overflow-y: auto;
-  border-radius: 15px;
-  position: relative;
-  padding: 2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative; /*Allows positioning the close button relative to this box */
 }
 
-.popup-content img {
-  /* Ensure image scales inside the modal */
-  max-width: 100%;
-  border-radius: 10px;
-}
 
 .popup-content h2 {
-  /* Gradient title for the recipe name */
   font-size: 2.5rem;
   font-weight: 700;
   -webkit-background-clip: text;
@@ -223,38 +216,69 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  
 }
 
-.popup-content ul {
-  /* Spacing for ingredient lists */
-  margin: 1rem 0;
-  padding-left: 1.2rem;
+/* Styles the *inner* body where the recipe details are loaded (renamed from popup-body) */
+.popup-body {
+
+  padding: 0;
 }
 
-.popup-content p {
-  /* Spacing for paragraphs (e.g., instructions) */
-  margin: 1rem 0;
-  font-size: 1rem;
-}
-
+/* Style for the close button, positioning it in the top-right corner of .popup-content */
 .close-btn {
-  /* Position the close button in the top right corner */
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
+  top: 10px;
+  right: 10px;
+  background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #666;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  color: #555;
+  z-index: 10; /* Ensures the button is clickable over the content */
+}
+
+/* styling Ingredients ul list*/
+.ingredients-list {
+  padding-left: 15px;   /* Remove default left padding that pushes the list off-center */
+  text-align: center;
+  list-style-type: disc;
+  margin: 0 auto 20px;
+  width: fit-content;
+  text-align: left;
+}
+
+.ingredients-list li {
+  
+  margin: 5px 0; /* Add a little vertical space between ingredients */
+}
+
+/* Styling instruction ol list*/
+.instructions-list {
+  
+  list-style-type: decimal;   /* Ensure the list markers (1, 2, 3...) are clearly visible */
+  padding-left: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.instructions-list li {
+
+  margin-bottom: 10px;
+}
+
+/* Image styling */
+.popup-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
 .close-btn:hover {
-  color: #2f74d4;
-  transform: scale(1.1);
-  transition: all 0.2s;
+color: #2f74d4;
+transform: scale(1.1);
+transition: all 0.2s;
 }
 
 /* Responsive Design */
