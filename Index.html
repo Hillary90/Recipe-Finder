@@ -41,43 +41,69 @@
     </div>
   </section>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="feature">
-      <h3>Instant Inspiration</h3>
-      <p>No more decision fatigue. Get random recipes with one click.</p>
-    </div>
-    <div class="feature">
-      <h3>Discover New Flavors</h3>
-      <p>Explore diverse cuisines and expand your culinary experience.</p>
-    </div>
-    <div class="feature">
-      <h3>Reduce Food Waste</h3>
-      <p>Find recipes using ingredients you already have at home.</p>
-    </div>
-  </section>
-
-  <!-- Generator -->
-  <main id="generator">
-    <div class="ingredientInput">
-      <input type="text" id="ingredientInput" placeholder="Enter Ingredient (eg. Tomato)">
-      <button id="searchBtn">Find Recipe</button>
-    </div>
-
-    <div class="searchBtn">
-      <button id="randomBtn">Generate Random Recipe</button>
-    </div>
-
-    <!-- Popup Modal -->
-    <div class="recipe-popup d-none">
-      <div class="popup-content shadow rounded p-4">
-        <button class="close-btn"><i class="fas fa-times"></i></button>
-        <div class="popup-body">
-          <!-- Recipe will load here -->
-        </div>
+ <!-- Features -->
+<section class="features container my-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="feature h-100">
+        <h3>Instant Inspiration</h3>
+        <p>No more decision fatigue. Get random recipes with one click.</p>
       </div>
     </div>
-  </main>
+    <div class="col-md-4">
+      <div class="feature h-100">
+        <h3>Discover New Flavors</h3>
+        <p>Explore diverse cuisines and expand your culinary experience.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature h-100">
+        <h3>Reduce Food Waste</h3>
+        <p>Find recipes using ingredients you already have at home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Generator -->
+<main id="generator" class="container my-5 text-center">
+  <div class="row justify-content-center mb-3">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="ingredientInput" 
+          class="form-control" 
+          placeholder="Enter Ingredient (eg. Tomato)">
+         <button id="searchBtn" class="btn btn-primary">
+          Find Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <button id="randomBtn" class="btn btn-success w-100">
+        Generate Random Recipe
+      </button>
+    </div>
+  </div>
+
+  <!-- Popup Modal (Custom or Bootstrap) -->
+  <div class="recipe-popup d-none">
+    <div class="popup-content shadow rounded p-4">
+      <button class="close-btn btn btn-sm btn-light position-absolute top-0 end-0 m-2">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="popup-body">
+        <!-- Recipe will load here -->
+      </div>
+    </div>
+  </div>
+</main>
+
 
   <!-- External Script -->
   <script defer src="./Src/main.js"></script>
