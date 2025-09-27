@@ -75,7 +75,6 @@ body {
 .hero-content button {
   /* Button background gradient */
   background: linear-gradient(to right, #2f74d4, #3a6073);
-  border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 30px;
   font-size: 1rem;
@@ -94,26 +93,15 @@ body {
  transition: all 0.3s ease;
 }
 
-
-.hero-image img {
-  max-width: 100%;   /* Ensure image scales down on smaller screens */
-  border-radius: 15px;
-  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-}
-
 /* Features Section Styling */
 .features {
   /* Use flexbox to arrange feature cards */
-  display: flex;
-  justify-content: space-around;   /* Space out the items evenly */
   padding: 3rem 1rem;
   background: #fff;
-  flex-wrap: wrap;   /* Allow features to wrap on smaller screens */
+
 }
 
 .feature {
-  /* Flex basis: allow to grow/shrink, initial width suggestion of 250px */
-  flex: 1 1 250px;
   margin: 1rem;
   padding: 1.5rem;
   background: #f1f1f1;
@@ -139,7 +127,18 @@ body {
   padding: 3rem 1rem;
   text-align: center;
 }
-
+#generator input {
+  max-width: 80%;
+}
+#generator button {
+background: linear-gradient(to right, #2f74d4, #3a6073);
+color: #fff;
+transition: 0.3s ease;
+}
+#generator button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
 .ingredientInput,
 .searchBtn {
   margin: 1rem 0;
@@ -160,34 +159,11 @@ body {
   border-color: #2f74d4;
 }
 
-
-/* Styling for the Add and Search buttons */
-.ingredientInput button,
-.searchBtn button {
-  background: linear-gradient(to right, #2f74d4, #3a6073);
-  border: none;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.ingredientInput button:hover,
-.searchBtn button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-
 /*Pop up container*/
 /* Ensures the popup container covers the screen and centers the content */
 .recipe-popup {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -199,9 +175,8 @@ body {
   background-color: #fff;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative; /*Allows positioning the close button relative to this box */
@@ -218,18 +193,10 @@ body {
   -webkit-text-fill-color: transparent;
   
 }
-
-/* Styles the *inner* body where the recipe details are loaded (renamed from popup-body) */
-.popup-body {
-
-  padding: 0;
-}
-
 /* Style for the close button, positioning it in the top-right corner of .popup-content */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 10px; right: 10px;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -265,14 +232,6 @@ body {
 .instructions-list li {
 
   margin-bottom: 10px;
-}
-
-/* Image styling */
-.popup-body img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
 }
 
 .close-btn:hover {
