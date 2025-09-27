@@ -184,7 +184,7 @@ body {
 /* Popup Modal (Recipe Display) */
 .recipe-popup {
   /* Position fixed to cover the entire viewport */
-  position: fixed; /* Using fixed instead of relative for fullscreen overlay */
+  position: relative; /* Using fixed instead of relative for fullscreen overlay */
   top: 0;
   left: 0;
   width: 100%;
