@@ -3,7 +3,8 @@
 The **Random Recipe Generator** is a simple web application that fetches and displays random meal recipes using [TheMealDB API](https://www.themealdb.com/).  
 It allows users to discover new dishes with ingredients, instructions, and meal images in just one click.
 
----
+# Live Demo
+You can view the project here: [Live Site](https://hillary90.github.io/Recipe-Finder/)
 
 ## 🚀 Features
 - Generate a **random recipe** instantly.
@@ -15,15 +16,11 @@ It allows users to discover new dishes with ingredients, instructions, and meal 
   - Cooking instructions
 - Responsive design for desktop and mobile.
 
----
-
 ## 🛠️ Tech Stack
 - **HTML5** – Structure
 - **CSS3** / **Bootstrap** – Styling & responsiveness
 - **JavaScript (ES6)** – Core functionality
 - **TheMealDB API** – Recipe data source
-
----
 
 ## 📦 Installation
 
@@ -68,16 +65,12 @@ async function fetchRandomRecipe() {
 Home Page
 ![Home Page](images/screencapture-127-0-0-1-5500-Index-html-2025-09-27-18_13_26.png)
 
-# Live Demo
-You can view the project here: [Live Site](https://hillary90.github.io/Recipe-Finder/)
-
 # 🔑 API Reference
 
 This project uses the free TheMealDB API.
 
 Endpoints used:
 [TheMealDB API](https://www.themealdb.com/)
-
 
 # 🎯 Roadmap 
 
