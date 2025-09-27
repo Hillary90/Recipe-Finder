@@ -66,7 +66,7 @@ async function fetchRandomRecipe() {
 ```
 # 📸 Screenshots
 Home Page
-![Home Page](./Images/screencapture-127-0-0-1-5500-Index-html-2025-09-27-18_38_45.png)
+![Home Page](images/screencapture-127-0-0-1-5500-Index-html-2025-09-27-18_38_45.png)
 
 # Live Link
 []()
